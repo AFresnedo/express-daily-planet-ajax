@@ -1,0 +1,17 @@
+<h1>Edit Article</h1>
+
+<!-- no PUT because ajax is specifying the method -->
+<form id="edit-form" action="/articles/<%= index %>">
+  <div class="form-group">
+    <label for="title" class="hidden">Title</label>
+    <input type="text" name="title" class="form-control"
+                                    id="title" value="<%= article.title %>">
+  </div>
+
+    <div class="form-group">
+      <label for="body" class="hidden">Body</label>
+      <textarea id="body" class="form-control" type="text" name="body"><%= article.body %></textarea>
+    </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
